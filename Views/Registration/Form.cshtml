@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Form";
+}
+
+<h2>Registration Form</h2>
+
+<form action="" method="POST">
+    <input type="text" class="form-control" name="name" placeholder="Name" value="@(Model==null ?"" :Model.name)" />
+    <span class="alert-danger">@Html.ValidationMessage("name")</span>
+
+    <input type="text" class="form-control" name="id" placeholder="ID" value="@(Model==null ?"" :Model.id)" />
+    <span class="alert-danger">@Html.ValidationMessage("id")</span>
+
+    <input type="email" class="form-control" name="email" placeholder="Email" value="@(Model==null ?"" :Model.email)" />
+    <span class="alert-danger">@Html.ValidationMessage("email")</span>
+
+    <input type="password" class="form-control" name="password" placeholder="Password" value="@(Model==null ?"" :Model.password)" />
+    <span class="alert-danger">@Html.ValidationMessage("password")</span>
+
+    <input type="password" class="form-control" name="confPassword" placeholder="Confirm Password" value="@(Model==null ?"" :Model.confPassword)" />
+    <span class="alert-danger">@Html.ValidationMessage("confPassword")</span>
+
+    <input type="text" class="form-control" name="dob" placeholder="Date of Birth" onclick="(this.type = 'date')" />
+    <span class="alert-danger">@Html.ValidationMessage("dob")</span>
+    <div>
+        <h5>
+            <b>Gender:</b> <br />
+            
+            <input type="radio" name="gender" value="Female" /> Female
+            <input type="radio" name="gender" value="Male" /> Male
+        </h5>
+    </div>
+    <span class="alert-danger">@Html.ValidationMessage("gender")</span>
+
+    <br />
+    <input type="submit" class="form-control" name="submit" value="Submit" />
+</form>
+

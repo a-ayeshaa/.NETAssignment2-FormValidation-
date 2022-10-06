@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+     var form = TempData["form"] as AssignmentFormValidation.Models.Form;
+}
+
+<h3>Form Submitted Successfully!</h3>
+
+<list>
+    <ul>@form.name</ul>
+    <ul>@form.id</ul>
+    <ul>@form.gender</ul>
+    <ul>@form.email</ul>
+    <ul>@form.dob</ul>
+
+</list>
+
